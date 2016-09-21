@@ -140,9 +140,17 @@ class JotComposeViewController: UIViewController, UITextViewDelegate {
     
     
     //MARK: TextViewDelegate
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.text.characters.count > 0 {
+            saveButton.image = UIImage(named: "save_button")?.withRenderingMode(.alwaysOriginal)
+        } else {
+            saveButton.image = UIImage(named: "save_button_50%")?.withRenderingMode(.alwaysOriginal)
+        }
+    }
+    
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         saveButton.isEnabled = true
-        saveButton.image = UIImage(named: "save_button")?.withRenderingMode(.alwaysOriginal)
     }
  
     

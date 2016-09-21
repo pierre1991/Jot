@@ -61,7 +61,7 @@ class JotListViewController: UIViewController {
                 _ = detailVC.view
                 
                 if let selectedRow = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row {
-                    detailVC.updateWithJot(JotController.sharedController.jot[selectedRow])
+                    detailVC.updateWithJot(JotController.sharedController.jot.reversed()[selectedRow])
                 }
             }
         }

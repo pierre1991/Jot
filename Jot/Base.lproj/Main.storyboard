@@ -15,17 +15,17 @@
                         <viewControllerLayoutGuide type="bottom" id="hIN-KO-XCx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JZh-sP-XWH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jvr-lb-4tY">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jotCell" rowHeight="56" id="tTZ-DM-eGN" customClass="JotTableViewCell" customModule="Jot" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="56"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tTZ-DM-eGN" id="V7b-nD-Roe">
-                                            <frame key="frameInset" width="320" height="55"/>
+                                            <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euo-AH-bwY">
@@ -62,12 +62,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jot" id="tcq-7L-drb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nh9-aq-pDR">
+                        <barButtonItem key="rightBarButtonItem" image="compose_button" id="nh9-aq-pDR">
                             <connections>
+                                <action selector="composeButtonTapped:" destination="mJy-Rc-xdN" id="5xK-x6-bbh"/>
                                 <segue destination="MNy-V7-45e" kind="show" id="6jp-kQ-olJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="composeBarButton" destination="nh9-aq-pDR" id="wUt-QL-n2b"/>
+                        <outlet property="tableView" destination="jvr-lb-4tY" id="N2D-78-Ovn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMz-jm-wHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,12 +87,11 @@
                         <viewControllerLayoutGuide type="bottom" id="7x3-fX-xDu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mR3-su-2c6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-eU-pgZ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -118,7 +122,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zfy-HY-RCt">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="KuT-za-sAM">
+                        <barButtonItem key="rightBarButtonItem" image="save_button" id="KuT-za-sAM">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="MNy-V7-45e" id="sp3-j1-OiQ"/>
                             </connections>
@@ -126,6 +130,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bodyTextView" destination="qlw-eU-pgZ" id="6eW-9t-R9d"/>
+                        <outlet property="hideButton" destination="GMs-vD-e9u" id="FXE-IJ-4l7"/>
                         <outlet property="saveButton" destination="KuT-za-sAM" id="64A-6U-9iA"/>
                         <outlet property="toolBar" destination="B8c-id-oq9" id="BEK-sT-zjY"/>
                     </connections>
@@ -135,6 +140,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
+                        <barButtonItem image="B" id="XNX-Jx-JAc"/>
+                        <barButtonItem width="12" style="plain" systemItem="fixedSpace" id="zdW-63-mgQ"/>
+                        <barButtonItem image="I" id="1Eb-fF-1Gl"/>
+                        <barButtonItem width="11" style="plain" systemItem="fixedSpace" id="UwN-wF-m1e"/>
+                        <barButtonItem image="U" id="XEV-vu-egU"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="bBO-Zb-PvU"/>
                         <barButtonItem title="hide" id="GMs-vD-e9u">
                             <connections>
@@ -166,7 +176,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="B" width="15" height="18"/>
+        <image name="I" width="7" height="19"/>
+        <image name="U" width="15" height="20"/>
+        <image name="compose_button" width="26" height="28"/>
         <image name="delete_button" width="25" height="32"/>
+        <image name="save_button" width="32" height="32"/>
         <image name="share_button" width="25" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>

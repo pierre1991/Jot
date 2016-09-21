@@ -172,8 +172,8 @@
 		8FC767461D92F025009E39DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8FC767371D92EFB2009E39DF /* JotComposeViewController.swift */,
 				8FC767391D92EFB2009E39DF /* JotListViewController.swift */,
+				8FC767371D92EFB2009E39DF /* JotComposeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -277,6 +277,7 @@
 				TargetAttributes = {
 					8FC767031D92ECFC009E39DF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VXY4XHS49U;
 						ProvisioningStyle = Automatic;
 					};
 					8FC767171D92ECFC009E39DF = {
@@ -503,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VXY4XHS49U;
 				INFOPLIST_FILE = Jot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.Pierre.Jot;
@@ -515,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VXY4XHS49U;
 				INFOPLIST_FILE = Jot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.Pierre.Jot;
