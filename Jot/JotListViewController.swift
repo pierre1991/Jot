@@ -70,7 +70,7 @@ class JotListViewController: UIViewController {
     
     func setupNavigationBar() {
         self.title = "jot"
-        composeBarButton.image = UIImage(named: "ComposeBarButton")?.withRenderingMode(.alwaysOriginal)
+        composeBarButton.image = UIImage(named: "compose_button")?.withRenderingMode(.alwaysOriginal)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }

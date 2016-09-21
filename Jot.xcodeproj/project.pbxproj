@@ -95,8 +95,6 @@
 		8FC766FB1D92ECFC009E39DF = {
 			isa = PBXGroup;
 			children = (
-				8FC7674C1D92F0BF009E39DF /* Jot+CoreDataClass.swift */,
-				8FC7674D1D92F0BF009E39DF /* Jot+CoreDataProperties.swift */,
 				8FC767061D92ECFC009E39DF /* Jot */,
 				8FC7671B1D92ECFC009E39DF /* JotTests */,
 				8FC767261D92ECFC009E39DF /* JotUITests */,
@@ -118,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8FC767481D92F03F009E39DF /* Resources */,
+				8FC767501D92F2B2009E39DF /* Model */,
 				8FC767471D92F02B009E39DF /* ModelController */,
 				8FC767461D92F025009E39DF /* ViewControllers */,
 				8FC767451D92F019009E39DF /* View */,
@@ -195,9 +194,19 @@
 				8FC7670E1D92ECFC009E39DF /* Assets.xcassets */,
 				8FC767101D92ECFC009E39DF /* LaunchScreen.storyboard */,
 				8FC767131D92ECFC009E39DF /* Info.plist */,
-				8FC767491D92F05D009E39DF /* Jot.xcdatamodeld */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		8FC767501D92F2B2009E39DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FC767491D92F05D009E39DF /* Jot.xcdatamodeld */,
+				8FC7674C1D92F0BF009E39DF /* Jot+CoreDataClass.swift */,
+				8FC7674D1D92F0BF009E39DF /* Jot+CoreDataProperties.swift */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +596,7 @@
 				8FC7672E1D92ECFC009E39DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FC7672F1D92ECFC009E39DF /* Build configuration list for PBXNativeTarget "JotTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +605,7 @@
 				8FC767311D92ECFC009E39DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FC767321D92ECFC009E39DF /* Build configuration list for PBXNativeTarget "JotUITests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +614,7 @@
 				8FC767341D92ECFC009E39DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -613,7 +625,8 @@
 				8FC7674A1D92F05D009E39DF /* Jot.xcdatamodel */,
 			);
 			currentVersion = 8FC7674A1D92F05D009E39DF /* Jot.xcdatamodel */;
-			path = Jot.xcdatamodeld;
+			name = Jot.xcdatamodeld;
+			path = Jot/Jot.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -39,7 +39,7 @@ class JotComposeViewController: UIViewController, UITextViewDelegate {
         self.automaticallyAdjustsScrollViewInsets = false
         
         saveButton.isEnabled = false
-        saveButton.image = UIImage(named: "Save_Button_50%")?.withRenderingMode(.alwaysOriginal)
+        saveButton.image = UIImage(named: "save_button_50%")?.withRenderingMode(.alwaysOriginal)
     
         setupToolbar()
         
@@ -142,7 +142,7 @@ class JotComposeViewController: UIViewController, UITextViewDelegate {
     //MARK: TextViewDelegate
     func textViewDidBeginEditing(_ textView: UITextView) {
         saveButton.isEnabled = true
-        saveButton.image = UIImage(named: "Save_Button")?.withRenderingMode(.alwaysOriginal)
+        saveButton.image = UIImage(named: "save_button")?.withRenderingMode(.alwaysOriginal)
     }
  
     

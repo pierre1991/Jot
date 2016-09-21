@@ -9,15 +9,57 @@
         <!--Jot-->
         <scene sceneID="Z8g-rK-RwY">
             <objects>
-                <viewController id="mJy-Rc-xdN" sceneMemberID="viewController">
+                <viewController id="mJy-Rc-xdN" customClass="JotListViewController" customModule="Jot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jj0-7b-BWw"/>
                         <viewControllerLayoutGuide type="bottom" id="hIN-KO-XCx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JZh-sP-XWH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jvr-lb-4tY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jotCell" rowHeight="56" id="tTZ-DM-eGN" customClass="JotTableViewCell" customModule="Jot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tTZ-DM-eGN" id="V7b-nD-Roe">
+                                            <frame key="frameInset" width="320" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euo-AH-bwY">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="euo-AH-bwY" secondAttribute="trailing" constant="48" id="5TP-HO-Fgf"/>
+                                                <constraint firstItem="euo-AH-bwY" firstAttribute="leading" secondItem="V7b-nD-Roe" secondAttribute="leading" constant="8" id="EIb-9e-xC1"/>
+                                                <constraint firstAttribute="bottom" secondItem="euo-AH-bwY" secondAttribute="bottom" constant="8" id="a7w-H4-1O6"/>
+                                                <constraint firstItem="euo-AH-bwY" firstAttribute="top" secondItem="V7b-nD-Roe" secondAttribute="top" constant="8" id="idZ-YS-OIl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jotLabel" destination="euo-AH-bwY" id="5qx-XQ-bhZ"/>
+                                            <segue destination="MNy-V7-45e" kind="show" identifier="toJotDetail" id="whq-gt-27S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mJy-Rc-xdN" id="O2H-Qs-w8X"/>
+                                    <outlet property="delegate" destination="mJy-Rc-xdN" id="o4Q-kF-sfm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jvr-lb-4tY" secondAttribute="trailing" id="5AQ-eb-TRY"/>
+                            <constraint firstItem="jvr-lb-4tY" firstAttribute="top" secondItem="JZh-sP-XWH" secondAttribute="top" id="f2a-1b-HhK"/>
+                            <constraint firstItem="hIN-KO-XCx" firstAttribute="top" secondItem="jvr-lb-4tY" secondAttribute="bottom" id="oEM-zJ-T8f"/>
+                            <constraint firstItem="jvr-lb-4tY" firstAttribute="leading" secondItem="JZh-sP-XWH" secondAttribute="leading" id="qH7-WE-Jp0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jot" id="tcq-7L-drb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nh9-aq-pDR">
@@ -29,50 +71,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMz-jm-wHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="182"/>
+            <point key="canvasLocation" x="877.5" y="181.69014084507043"/>
         </scene>
-        <!--View Controller-->
+        <!--Jot Compose View Controller-->
         <scene sceneID="svg-Hx-tBT">
             <objects>
-                <viewController id="MNy-V7-45e" sceneMemberID="viewController">
+                <viewController id="MNy-V7-45e" customClass="JotComposeViewController" customModule="Jot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eo6-Ey-ZxK"/>
                         <viewControllerLayoutGuide type="bottom" id="7x3-fX-xDu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mR3-su-2c6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-eU-pgZ">
-                                <frame key="frameInset" minX="15" minY="80" width="290" height="440"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-eU-pgZ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8X-0d-cRx">
-                                <frame key="frameInset" minX="15" minY="530" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8X-0d-cRx">
+                                <state key="normal" image="delete_button"/>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="MNy-V7-45e" eventType="touchUpInside" id="UTP-bV-hAQ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq3-Fl-FkK">
-                                <frame key="frameInset" minX="259" minY="530" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq3-Fl-FkK">
+                                <state key="normal" image="share_button"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="MNy-V7-45e" eventType="touchUpInside" id="eBQ-g9-rD7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7x3-fX-xDu" firstAttribute="top" secondItem="qq3-Fl-FkK" secondAttribute="bottom" constant="5" id="308-eu-s2s"/>
+                            <constraint firstItem="7x3-fX-xDu" firstAttribute="top" secondItem="u8X-0d-cRx" secondAttribute="bottom" constant="7" id="4CQ-HK-SlS"/>
                             <constraint firstItem="qlw-eU-pgZ" firstAttribute="leading" secondItem="mR3-su-2c6" secondAttribute="leading" constant="15" id="9DC-45-hmz"/>
+                            <constraint firstItem="u8X-0d-cRx" firstAttribute="leading" secondItem="mR3-su-2c6" secondAttribute="leading" constant="15" id="Ga6-Vp-d3d"/>
+                            <constraint firstAttribute="trailing" secondItem="qq3-Fl-FkK" secondAttribute="trailing" constant="15" id="KIu-XW-1nA"/>
+                            <constraint firstItem="qq3-Fl-FkK" firstAttribute="top" secondItem="qlw-eU-pgZ" secondAttribute="bottom" constant="8" id="OBk-FX-DZ3"/>
+                            <constraint firstItem="u8X-0d-cRx" firstAttribute="top" secondItem="qlw-eU-pgZ" secondAttribute="bottom" constant="9" id="Wjh-pK-oT7"/>
                             <constraint firstAttribute="trailing" secondItem="qlw-eU-pgZ" secondAttribute="trailing" constant="15" id="dNE-px-Akv"/>
                             <constraint firstItem="qlw-eU-pgZ" firstAttribute="top" secondItem="eo6-Ey-ZxK" secondAttribute="bottom" constant="15" id="oQp-d3-iU9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zfy-HY-RCt">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="KuT-za-sAM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="KuT-za-sAM">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="MNy-V7-45e" id="sp3-j1-OiQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="qlw-eU-pgZ" id="6eW-9t-R9d"/>
+                        <outlet property="saveButton" destination="KuT-za-sAM" id="64A-6U-9iA"/>
+                        <outlet property="toolBar" destination="B8c-id-oq9" id="BEK-sT-zjY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RW-SD-Kd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="B8c-id-oq9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="bBO-Zb-PvU"/>
+                        <barButtonItem title="hide" id="GMs-vD-e9u">
+                            <connections>
+                                <action selector="hideButtonTapped:" destination="MNy-V7-45e" id="dOb-GP-jMx"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="1657.5" y="181.69014084507043"/>
         </scene>
@@ -95,4 +165,11 @@
             <point key="canvasLocation" x="149.59999999999999" y="182.15892053973016"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="delete_button" width="25" height="32"/>
+        <image name="share_button" width="25" height="35"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="whq-gt-27S"/>
+    </inferredMetricsTieBreakers>
 </document>

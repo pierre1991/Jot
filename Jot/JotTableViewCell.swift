@@ -12,7 +12,6 @@ class JotTableViewCell: UITableViewCell {
 
     
     //MARK: IBOutlets
-    @IBOutlet weak var customCellView: UIView!
     @IBOutlet weak var jotLabel: UILabel!
     
     
@@ -27,7 +26,5 @@ class JotTableViewCell: UITableViewCell {
 	
     func updateJot(_ jot: Jot) {
     	jotLabel.text = jot.body
-        
-        customCellView.layer.cornerRadius = 6.0
     }
 }
