@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		8FC767081D92ECFC009E39DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767071D92ECFC009E39DF /* AppDelegate.swift */; };
-		8FC7670A1D92ECFC009E39DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767091D92ECFC009E39DF /* ViewController.swift */; };
 		8FC7670D1D92ECFC009E39DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC7670B1D92ECFC009E39DF /* Main.storyboard */; };
 		8FC7670F1D92ECFC009E39DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC7670E1D92ECFC009E39DF /* Assets.xcassets */; };
 		8FC767121D92ECFC009E39DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC767101D92ECFC009E39DF /* LaunchScreen.storyboard */; };
 		8FC7671D1D92ECFC009E39DF /* JotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7671C1D92ECFC009E39DF /* JotTests.swift */; };
 		8FC767281D92ECFC009E39DF /* JotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767271D92ECFC009E39DF /* JotUITests.swift */; };
+		8FC767361D92EFA5009E39DF /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767351D92EFA4009E39DF /* AppearanceController.swift */; };
+		8FC7673D1D92EFB2009E39DF /* JotComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767371D92EFB2009E39DF /* JotComposeViewController.swift */; };
+		8FC7673E1D92EFB2009E39DF /* JotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767381D92EFB2009E39DF /* JotController.swift */; };
+		8FC7673F1D92EFB2009E39DF /* JotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767391D92EFB2009E39DF /* JotListViewController.swift */; };
+		8FC767401D92EFB2009E39DF /* JotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7673A1D92EFB2009E39DF /* JotTableViewCell.swift */; };
+		8FC767411D92EFB2009E39DF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7673B1D92EFB2009E39DF /* Stack.swift */; };
+		8FC767421D92EFB2009E39DF /* UIColor+AppColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7673C1D92EFB2009E39DF /* UIColor+AppColorPallete.swift */; };
+		8FC7674B1D92F05D009E39DF /* Jot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FC767491D92F05D009E39DF /* Jot.xcdatamodeld */; };
+		8FC7674E1D92F0BF009E39DF /* Jot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7674C1D92F0BF009E39DF /* Jot+CoreDataClass.swift */; };
+		8FC7674F1D92F0BF009E39DF /* Jot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7674D1D92F0BF009E39DF /* Jot+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		8FC767041D92ECFC009E39DF /* Jot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC767071D92ECFC009E39DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FC767091D92ECFC009E39DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FC7670C1D92ECFC009E39DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FC7670E1D92ECFC009E39DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FC767111D92ECFC009E39DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 		8FC767231D92ECFC009E39DF /* JotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC767271D92ECFC009E39DF /* JotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JotUITests.swift; sourceTree = "<group>"; };
 		8FC767291D92ECFC009E39DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FC767351D92EFA4009E39DF /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
+		8FC767371D92EFB2009E39DF /* JotComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JotComposeViewController.swift; sourceTree = "<group>"; };
+		8FC767381D92EFB2009E39DF /* JotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JotController.swift; sourceTree = "<group>"; };
+		8FC767391D92EFB2009E39DF /* JotListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JotListViewController.swift; sourceTree = "<group>"; };
+		8FC7673A1D92EFB2009E39DF /* JotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JotTableViewCell.swift; sourceTree = "<group>"; };
+		8FC7673B1D92EFB2009E39DF /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		8FC7673C1D92EFB2009E39DF /* UIColor+AppColorPallete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColorPallete.swift"; sourceTree = "<group>"; };
+		8FC7674A1D92F05D009E39DF /* Jot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jot.xcdatamodel; sourceTree = "<group>"; };
+		8FC7674C1D92F0BF009E39DF /* Jot+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Jot+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8FC7674D1D92F0BF009E39DF /* Jot+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Jot+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,8 @@
 		8FC766FB1D92ECFC009E39DF = {
 			isa = PBXGroup;
 			children = (
+				8FC7674C1D92F0BF009E39DF /* Jot+CoreDataClass.swift */,
+				8FC7674D1D92F0BF009E39DF /* Jot+CoreDataProperties.swift */,
 				8FC767061D92ECFC009E39DF /* Jot */,
 				8FC7671B1D92ECFC009E39DF /* JotTests */,
 				8FC767261D92ECFC009E39DF /* JotUITests */,
@@ -97,12 +117,12 @@
 		8FC767061D92ECFC009E39DF /* Jot */ = {
 			isa = PBXGroup;
 			children = (
-				8FC767071D92ECFC009E39DF /* AppDelegate.swift */,
-				8FC767091D92ECFC009E39DF /* ViewController.swift */,
-				8FC7670B1D92ECFC009E39DF /* Main.storyboard */,
-				8FC7670E1D92ECFC009E39DF /* Assets.xcassets */,
-				8FC767101D92ECFC009E39DF /* LaunchScreen.storyboard */,
-				8FC767131D92ECFC009E39DF /* Info.plist */,
+				8FC767481D92F03F009E39DF /* Resources */,
+				8FC767471D92F02B009E39DF /* ModelController */,
+				8FC767461D92F025009E39DF /* ViewControllers */,
+				8FC767451D92F019009E39DF /* View */,
+				8FC767441D92F010009E39DF /* Helper */,
+				8FC767431D92F00B009E39DF /* Appearance */,
 			);
 			path = Jot;
 			sourceTree = "<group>";
@@ -123,6 +143,61 @@
 				8FC767291D92ECFC009E39DF /* Info.plist */,
 			);
 			path = JotUITests;
+			sourceTree = "<group>";
+		};
+		8FC767431D92F00B009E39DF /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				8FC7673C1D92EFB2009E39DF /* UIColor+AppColorPallete.swift */,
+				8FC767351D92EFA4009E39DF /* AppearanceController.swift */,
+			);
+			name = Appearance;
+			sourceTree = "<group>";
+		};
+		8FC767441D92F010009E39DF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8FC7673B1D92EFB2009E39DF /* Stack.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		8FC767451D92F019009E39DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FC7673A1D92EFB2009E39DF /* JotTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8FC767461D92F025009E39DF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FC767371D92EFB2009E39DF /* JotComposeViewController.swift */,
+				8FC767391D92EFB2009E39DF /* JotListViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8FC767471D92F02B009E39DF /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				8FC767381D92EFB2009E39DF /* JotController.swift */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		8FC767481D92F03F009E39DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FC767071D92ECFC009E39DF /* AppDelegate.swift */,
+				8FC7670B1D92ECFC009E39DF /* Main.storyboard */,
+				8FC7670E1D92ECFC009E39DF /* Assets.xcassets */,
+				8FC767101D92ECFC009E39DF /* LaunchScreen.storyboard */,
+				8FC767131D92ECFC009E39DF /* Info.plist */,
+				8FC767491D92F05D009E39DF /* Jot.xcdatamodeld */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FC7670A1D92ECFC009E39DF /* ViewController.swift in Sources */,
 				8FC767081D92ECFC009E39DF /* AppDelegate.swift in Sources */,
+				8FC7674E1D92F0BF009E39DF /* Jot+CoreDataClass.swift in Sources */,
+				8FC767401D92EFB2009E39DF /* JotTableViewCell.swift in Sources */,
+				8FC767411D92EFB2009E39DF /* Stack.swift in Sources */,
+				8FC7673F1D92EFB2009E39DF /* JotListViewController.swift in Sources */,
+				8FC7673D1D92EFB2009E39DF /* JotComposeViewController.swift in Sources */,
+				8FC767361D92EFA5009E39DF /* AppearanceController.swift in Sources */,
+				8FC7673E1D92EFB2009E39DF /* JotController.swift in Sources */,
+				8FC7674B1D92F05D009E39DF /* Jot.xcdatamodeld in Sources */,
+				8FC7674F1D92F0BF009E39DF /* Jot+CoreDataProperties.swift in Sources */,
+				8FC767421D92EFB2009E39DF /* UIColor+AppColorPallete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +605,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8FC767491D92F05D009E39DF /* Jot.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8FC7674A1D92F05D009E39DF /* Jot.xcdatamodel */,
+			);
+			currentVersion = 8FC7674A1D92F05D009E39DF /* Jot.xcdatamodel */;
+			path = Jot.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8FC766FC1D92ECFC009E39DF /* Project object */;
 }
