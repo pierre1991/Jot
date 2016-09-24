@@ -131,6 +131,59 @@ class JotComposeViewController: UIViewController, UITextViewDelegate {
             })
         }
     }
+    
+    
+    @IBAction func boltButtonTapped(_ sender: AnyObject) {
+		//let selectedRange = bodyTextView.selectedRange
+    }
+    
+    @IBAction func italicsButtonTapped(_ sender: AnyObject) {
+        
+    }
+    
+    @IBAction func underlineButtonTapped(_ sender: AnyObject) {
+        //let selectedRange = bodyTextView.selectedRange
+        //let currentAttributes = bodyTextView.textStorage.attributes(at: selectedRange.location, effectiveRange: nil)
+    }
+    
+    
+    func applyFontStyleToSelection(attributes: [String:AnyObject]) {
+        let range = bodyTextView.selectedRange
+        
+        bodyTextView.textStorage.beginEditing()
+        bodyTextView.textStorage.setAttributes(attributes, range: range)
+        bodyTextView.textStorage.endEditing()
+    }
+    
+    /*
+    func textStyleSelection(range: NSRange, style: String) -> [String:AnyObject] {
+        let attributes = bodyTextView.textStorage.attributes(at: range.location, effectiveRange: nil)
+        
+        guard let currentFont = attributes[NSFontAttributeName] as? UIFont else {
+            return [NSFontAttributeName: UIFont(name: "AvenirNext", size: 24.0)!]
+        }
+        
+        switch currentFont.fontName {
+        case "AvenirNext-Bold":
+            if style == "AvenirNext-Bold" {
+            	return [NSFontAttributeName: UIFont(name: "AvenirNext-Bold", size: 24.0)!]
+            }
+        case "AvenirNext-Italic":
+            if style == "AvenirNext-Italic" {
+            	return [NSFontAttributeName: UIFont(name: "AvenirNext-Italic", size: 24.0)!]
+            }
+    	default:
+            return [NSFontAttributeName: UIFont(name: "AvenirNext", size: 24.0)!]
+        }
+    }
+    */
+    
+    
+    
+    
+    
+    
+    
 
     
     func updateWithJot(_ jot: Jot) {
