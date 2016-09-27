@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EMO-L9-nR8">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EMO-L9-nR8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -15,17 +15,17 @@
                         <viewControllerLayoutGuide type="bottom" id="hIN-KO-XCx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JZh-sP-XWH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jvr-lb-4tY">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jotCell" rowHeight="56" id="tTZ-DM-eGN" customClass="JotTableViewCell" customModule="Jot" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tTZ-DM-eGN" id="V7b-nD-Roe">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <frame key="frameInset" width="320" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euo-AH-bwY">
@@ -52,13 +52,49 @@
                                     <outlet property="delegate" destination="mJy-Rc-xdN" id="o4Q-kF-sfm"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-n9-eJ5" userLabel="NoNotesView">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDr-0H-YWu">
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="MNy-V7-45e" kind="show" id="7Bd-R9-y8e"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start off with a jot by tapping the pencil" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYC-ES-hbW">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" red="0.2040569479695431" green="0.2040569479695431" blue="0.2040569479695431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you have no jots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acu-Zc-L2o">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.50545288705583757" green="0.50545288705583757" blue="0.50545288705583757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qYC-ES-hbW" secondAttribute="bottom" constant="142" id="11L-Qg-GJM"/>
+                                    <constraint firstItem="acu-Zc-L2o" firstAttribute="leading" secondItem="d4N-n9-eJ5" secondAttribute="leading" constant="97" id="4ti-3A-7ZD"/>
+                                    <constraint firstItem="acu-Zc-L2o" firstAttribute="top" secondItem="d4N-n9-eJ5" secondAttribute="top" constant="130" id="CXa-rf-GII"/>
+                                    <constraint firstItem="vDr-0H-YWu" firstAttribute="centerX" secondItem="d4N-n9-eJ5" secondAttribute="centerX" id="Dz2-b5-2ao"/>
+                                    <constraint firstAttribute="trailing" secondItem="qYC-ES-hbW" secondAttribute="trailing" constant="22" id="Rrt-RT-Ypo"/>
+                                    <constraint firstItem="qYC-ES-hbW" firstAttribute="leading" secondItem="d4N-n9-eJ5" secondAttribute="leading" constant="23" id="i81-Mr-5Xi"/>
+                                    <constraint firstItem="vDr-0H-YWu" firstAttribute="centerY" secondItem="d4N-n9-eJ5" secondAttribute="centerY" constant="-24" id="kDD-ib-2Bm"/>
+                                    <constraint firstItem="qYC-ES-hbW" firstAttribute="centerX" secondItem="d4N-n9-eJ5" secondAttribute="centerX" id="uGf-Lb-27n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jvr-lb-4tY" secondAttribute="trailing" id="5AQ-eb-TRY"/>
+                            <constraint firstItem="d4N-n9-eJ5" firstAttribute="leading" secondItem="JZh-sP-XWH" secondAttribute="leading" id="6Fy-RB-psh"/>
+                            <constraint firstItem="hIN-KO-XCx" firstAttribute="top" secondItem="d4N-n9-eJ5" secondAttribute="bottom" id="RDL-TC-DJv"/>
                             <constraint firstItem="jvr-lb-4tY" firstAttribute="top" secondItem="JZh-sP-XWH" secondAttribute="top" id="f2a-1b-HhK"/>
                             <constraint firstItem="hIN-KO-XCx" firstAttribute="top" secondItem="jvr-lb-4tY" secondAttribute="bottom" id="oEM-zJ-T8f"/>
+                            <constraint firstAttribute="trailing" secondItem="d4N-n9-eJ5" secondAttribute="trailing" id="pwP-GT-vVP"/>
                             <constraint firstItem="jvr-lb-4tY" firstAttribute="leading" secondItem="JZh-sP-XWH" secondAttribute="leading" id="qH7-WE-Jp0"/>
+                            <constraint firstItem="d4N-n9-eJ5" firstAttribute="top" secondItem="jj0-7b-BWw" secondAttribute="bottom" id="zFs-8g-vMj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jot" id="tcq-7L-drb">
@@ -71,6 +107,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="composeBarButton" destination="nh9-aq-pDR" id="wUt-QL-n2b"/>
+                        <outlet property="noNotesView" destination="d4N-n9-eJ5" id="2f4-wV-cw6"/>
                         <outlet property="tableView" destination="jvr-lb-4tY" id="N2D-78-Ovn"/>
                     </connections>
                 </viewController>
@@ -87,7 +124,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7x3-fX-xDu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mR3-su-2c6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-eU-pgZ">
@@ -197,6 +234,6 @@
         <image name="share_button" width="25" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="whq-gt-27S"/>
+        <segue reference="7Bd-R9-y8e"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,12 +12,14 @@ import UIKit
 class AppearanceController {
     
     static func initializeAppearance() {
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().barTintColor = .purpleNavigationBarColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName:UIColor.white,
             NSFontAttributeName: UIFont(name: "Avenir-Medium", size: 32)!
         ]
-        UIApplication.shared.statusBarStyle = .lightContent
     }
 }

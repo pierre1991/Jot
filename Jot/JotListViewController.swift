@@ -20,11 +20,15 @@ class JotListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var composeBarButton: UIBarButtonItem!
     
+    @IBOutlet weak var noNotesView: UIView!
+    
     
     
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNeedsStatusBarAppearanceUpdate()
         
 		setupNavigationBar()
         setupTableView()
@@ -34,15 +38,21 @@ class JotListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+        
+        if JotController.sharedController.jot.count == 0 {
+            noNotesView.isHidden = false
+        } else if JotController.sharedController.jot.count > 0 {
+            noNotesView.isHidden = true
+            tableView.reloadData()
+        }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
 
-    
-    
+
+    //MARK: Status Bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+   
     
     //MARK: IBActions
 	@IBAction func composeButtonTapped(_ sender: AnyObject) {
@@ -81,8 +91,14 @@ extension JotListViewController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Table View Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return JotController.sharedController.jot.count
-    }
+        if JotController.sharedController.jot.count > 0 {
+            return JotController.sharedController.jot.count
+        } else {
+        	self.noNotesView.isHidden = false
+        }
+        
+        return 0
+	}
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     	let cell = tableView.dequeueReusableCell(withIdentifier: "jotCell", for: indexPath) as! JotTableViewCell
